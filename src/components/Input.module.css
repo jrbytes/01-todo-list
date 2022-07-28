@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+}
+
+.input {
+  background-color: var(--gray-500);
+  color: var(--white);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+
+  width: 40rem;
+  height: 3.6rem;
+  padding: 0.4rem 1.2rem;
+  margin-right: 0.4rem;
+}
+
+.button {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  padding: 0.4rem 1.2rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button svg {
+  margin-left: 0.4rem;
+}
