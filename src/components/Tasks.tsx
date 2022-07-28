@@ -1,6 +1,9 @@
 import styles from './Tasks.module.css'
 
 import clipboard from '../assets/clipboard.svg'
+import check from '../assets/check.svg'
+import checked from '../assets/checked.svg'
+import { Trash } from 'phosphor-react'
 
 export function Tasks() {
   return (
@@ -18,10 +21,23 @@ export function Tasks() {
         </header>
       </div>
       <main className={styles.main}>
-        <div className={styles.empty}>
+        {/* <div className={styles.empty}>
           <img src={clipboard} alt="" />
           <strong>Você ainda não tem tarefas cadastradas</strong>
           Crie tarefas e organize seus itens a fazer
+        </div> */}
+
+        <div className={styles.tasks}>
+          <div className={styles.task}>
+            <img src={check} alt="" />
+            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <Trash size={20} />
+          </div>
+          <div className={`${styles.task} ${styles.taskCompleted}`}>
+            <img src={checked} />
+            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <Trash size={20} />
+          </div>
         </div>
       </main>
     </>

@@ -15,7 +15,7 @@
   padding: 0 20px;
   margin-bottom: 20px;
 
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .tasksCreated {
@@ -68,4 +68,52 @@
   margin-bottom: 1rem;
 }
 
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.task {
+  background-color: var(--gray-500);
+
+  display: flex;
+  position: relative;
+
+  width: 47rem;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+
+  font-size: 1rem;
+  color: var(--white);
+  border: 1px solid var(--gray-400);
+}
+
+.task img {
+  position: absolute;
+  left: 1.4rem;
+  margin-right: 0.8rem;
+}
+
+.task p {
+  margin: 0 2.2rem;
+}
+
+.task svg {
+  position: absolute;
+  right: 1.4rem;
+  margin-left: 0.8rem;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.taskCompleted {
+  border: 0;
+}
+
+.taskCompleted p {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
