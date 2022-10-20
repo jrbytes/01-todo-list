@@ -18,7 +18,9 @@ export function Tasks() {
   const [task, setTask] = useState<TaskProps[]>([])
 
   function handleAddNewTask(content: string) {
-    setTask([{ id: v4(), content, done: false }, ...task])
+    if (content.length > 0) {
+      setTask([{ id: v4(), content, done: false }, ...task])
+    }
   }
 
   function toggleCheckedTask(id: string) {
