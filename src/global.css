@@ -16,6 +16,12 @@
   --blue-dark: #1E6F9F;
 
   --danger: #E25858;
+
+  --container-width: 768px;
+
+  --border-radius: 8px;
+
+  --spacing: 0.4rem;
 }
 
 :focus {

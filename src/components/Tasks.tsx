@@ -50,32 +50,32 @@ export function Tasks() {
             <span>{tasksCompleted}</span>
           </div>
         </header>
-      </div>
-      <main className={styles.main}>
-        {!hasTasks ? (
-          <div className={styles.empty}>
-            <img src={clipboard} alt="" />
-            <strong>Você ainda não tem tarefas cadastradas</strong>
-            Crie tarefas e organize seus itens a fazer
-          </div>
-        ) : (
-          <div className={styles.tasks}>
-            {task.map((task) => (
-              <div
+        <main className={styles.main}>
+          {!hasTasks ? (
+            <div className={styles.empty}>
+              <img src={clipboard} alt="" />
+              <strong>Você ainda não tem tarefas cadastradas</strong>
+              Crie tarefas e organize seus itens a fazer
+            </div>
+          ) : (
+            <div className={styles.tasks}>
+              {task.map((task) => (
+                <div
                 key={task.id}
                 className={`${styles.task} ${task.done ? styles.taskCompleted : ''}`}
-              >
-                <img
-                  src={task.done ? checked : check}
-                  onClick={() => toggleCheckedTask(task.id)}
-                />
-                <p>{task.content}</p>
-                <Trash size={20} onClick={() => handleDeleteTask(task.id)} />
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
+                >
+                  <img
+                    src={task.done ? checked : check}
+                    onClick={() => toggleCheckedTask(task.id)}
+                    />
+                  <p>{task.content}</p>
+                  <Trash size={20} onClick={() => handleDeleteTask(task.id)} />
+                </div>
+              ))}
+            </div>
+          )}
+        </main>
+      </div>
     </>
   )
 }
